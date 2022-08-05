@@ -12,7 +12,7 @@ class EmojiBoard extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5),
           decoration:
               const BoxDecoration(shape: BoxShape.circle, color: emojiBGColor),
           child: Center(

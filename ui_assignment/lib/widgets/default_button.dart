@@ -19,7 +19,7 @@ class DefaultButton extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         width: MediaQuery.of(context).size.width / 2.4,
-        height: MediaQuery.of(context).size.height / 18,
+        height: 50,
         //padding: const EdgeInsets.fromLTRB(0, 14, 0, 14),
         decoration: const BoxDecoration(
             color: defaultBlack, borderRadius: defaultButtonRadius),

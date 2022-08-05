@@ -227,8 +227,10 @@ class ProfileSection extends StatelessWidget {
               ],
             ),
             EditProfieButton(onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SecondScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SecondScreen()));
             })
           ],
         ),

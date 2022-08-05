@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ui_assignment/utils/konstant.dart';
 import 'package:ui_assignment/widgets/emoji_board.dart';
 import 'package:ui_assignment/widgets/slider_item.dart';
+import 'widgets/nearby_doc_card.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({Key? key}) : super(key: key);
@@ -13,14 +14,68 @@ class SecondScreen extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ProfileSection(
-              height: height,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ProfileSection(
+                height: height,
+              ),
+              const MyAppointmentSection(),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    child: Text(
+                      "Nearby Doctors",
+                      style: defaultBoldTextStyle.copyWith(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 10, 0),
+                    child: Column(
+                      children: const [
+                        NearbyDocCard(),
+                        NearbyDocCard(),
+                        NearbyDocCard(),
+                      ],
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+            border: Border(
+                top: BorderSide(color: gray.withOpacity(0.5), width: 1))),
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          unselectedItemColor: lightGrey,
+          iconSize: 30,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.now_widgets),
+              label: '',
             ),
-            const MyAppointmentSection()
+            BottomNavigationBarItem(
+              icon: Icon(Icons.calendar_month),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.message_rounded,
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: '')
           ],
+          //currentIndex: _selectedIndex,
+          selectedItemColor: defaultBlue,
+          //onTap: _onItemTapped,
         ),
       ),
     );
@@ -51,13 +106,13 @@ class MyAppointmentSection extends StatelessWidget {
           ],
           //Slider Container properties
           options: CarouselOptions(
-            height: 140.0,
+            height: 150.0,
             enlargeCenterPage: false,
             autoPlay: false,
             autoPlayCurve: Curves.fastOutSlowIn,
             enableInfiniteScroll: false,
-            autoPlayAnimationDuration: Duration(milliseconds: 800),
-            viewportFraction: 0.9,
+            autoPlayAnimationDuration: const Duration(milliseconds: 800),
+            viewportFraction: 0.87,
           ),
         ),
       ],
@@ -146,8 +201,8 @@ class ProfileSection extends StatelessWidget {
           ),
           Positioned(
             top: height < 700 ? 100 : 155,
-            left: 25,
-            right: 25,
+            left: 35,
+            right: 35,
             child: const HowAreYouCard(),
           ),
         ],
@@ -166,7 +221,6 @@ class HowAreYouCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(0, 20, 0, 15),
       // height: height / 4.5,
-      width: MediaQuery.of(context).size.width / 1.3,
       decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topLeft,

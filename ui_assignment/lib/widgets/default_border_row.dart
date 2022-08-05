@@ -35,7 +35,7 @@ class DefaultBorderRow extends StatelessWidget {
                   ),
                   Text(
                     text,
-                    style: defaultTextStyle.copyWith(fontSize: 20),
+                    style: defaultTextStyle.copyWith(fontSize: 18),
                   ),
                 ],
               ),
@@ -53,7 +53,7 @@ class DefaultBorderRow extends StatelessWidget {
               child: Text(
                 rate,
                 style: secondaryTextStyle.copyWith(
-                    fontSize: 18, fontWeight: FontWeight.bold),
+                    fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
           ],

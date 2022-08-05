@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const Color defaultBlack = Color(0xFF3F3E3E);
 const Color lightGrey = Color(0xFF656565);
 const Color defaultDivider = Color(0xFFE0F2FA);
-const Color gery = Color(0xFFB9B9B9);
+const Color gray = Color(0xFFB9B9B9);
 const Color defaultWhite = Colors.white;
 var dropDownItem = [
   "today",

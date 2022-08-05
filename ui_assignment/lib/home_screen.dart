@@ -15,8 +15,8 @@ class HomeScreen extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(children: [
             ProfileSection(height: height, width: width),
             Container(
@@ -64,26 +64,26 @@ class HomeScreen extends StatelessWidget {
                 DefaultBorderRow(
                     icon: Icons.shopping_bag_rounded,
                     text: "Burger Queen",
-                    rate: "-\$9"),
+                    rate: "+\$20"),
                 SizedBox(
                   height: 20,
                 ),
                 DefaultBorderRow(
-                    icon: Icons.flight, text: "Flight Ticket", rate: "-\$270"),
+                    icon: Icons.flight, text: "Flight Ticket", rate: "+\$240"),
                 SizedBox(
                   height: 20,
                 ),
                 DefaultBorderRow(
                     icon: Icons.directions_car_filled,
                     text: "Car Services",
-                    rate: "-\$300"),
+                    rate: "+\$200"),
                 SizedBox(
                   height: 20,
                 ),
                 DefaultBorderRow(
                     icon: Icons.card_giftcard_rounded,
                     text: "Gift Shop",
-                    rate: "-\$300"),
+                    rate: "+\$130"),
               ],
             ),
           ]),
@@ -190,7 +190,7 @@ class ProfileSection extends StatelessWidget {
                     left: 12,
                     child: CircleAvatar(
                       radius: 6,
-                      backgroundColor: gery,
+                      backgroundColor: gray,
                     ),
                   )
                 ],
@@ -233,7 +233,7 @@ class ProfileSection extends StatelessWidget {
           child: Center(
             child: Text(
               "Total balance:",
-              style: defaultTextStyle.copyWith(fontSize: 20),
+              style: defaultTextStyle.copyWith(fontSize: 18),
             ),
           ),
         ),
@@ -248,7 +248,7 @@ class ProfileSection extends StatelessWidget {
               ),
               Text(
                 "16.000",
-                style: defaultBoldTextStyle.copyWith(fontSize: 30),
+                style: defaultBoldTextStyle.copyWith(fontSize: 35),
               ),
             ],
           ),

@@ -18,9 +18,10 @@ class DefaultBorderRow extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width / 1.4,
-              height: MediaQuery.of(context).size.height / 21,
+              height: MediaQuery.of(context).size.height / 22,
               decoration: const BoxDecoration(
-                  border: Border(bottom: BorderSide(width: 0.5))),
+                border: Border(bottom: BorderSide(width: 0.1)),
+              ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -42,15 +43,17 @@ class DefaultBorderRow extends StatelessWidget {
             Container(
               alignment: Alignment.centerLeft,
               width: MediaQuery.of(context).size.width / 4.9,
-              height: MediaQuery.of(context).size.height / 21,
+              height: MediaQuery.of(context).size.height / 22,
               padding: const EdgeInsets.only(left: 5),
               decoration: const BoxDecoration(
-                  border: Border(
-                      left: BorderSide(width: 0.5),
-                      bottom: BorderSide(width: 0.5))),
+                border: Border(
+                    left: BorderSide(width: 0.1),
+                    bottom: BorderSide(width: 0.1)),
+              ),
               child: Text(
                 rate,
-                style: defaultBoldTextStyle.copyWith(fontSize: 20),
+                style: secondaryTextStyle.copyWith(
+                    fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),
           ],

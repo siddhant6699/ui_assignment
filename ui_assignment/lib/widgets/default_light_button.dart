@@ -18,8 +18,9 @@ class DefaultLightButton extends StatelessWidget {
       splashColor: lightGrey,
       onTap: onPressed,
       child: Container(
-        width: MediaQuery.of(context).size.width / 2.5,
-        padding: const EdgeInsets.fromLTRB(0, 14, 0, 14),
+        width: MediaQuery.of(context).size.width / 2.4,
+        height: MediaQuery.of(context).size.height / 18,
+        //padding: const EdgeInsets.fromLTRB(0, 14, 0, 14),
         decoration: BoxDecoration(
           border: Border.all(
             color: defaultBlack,

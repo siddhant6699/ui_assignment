@@ -11,6 +11,7 @@ const Color defaultLightBlue = Color(0xFF0962F5);
 const Color defaultLime = Color(0xFFA8F2DE);
 const Color secondaryLightBlue = Color(0xFF3684EC);
 const Color emojiBGColor = Color(0xFFB2DAF2);
+const String profileImg = 'assets/images/profile_img.jpeg';
 var dropDownItem = [
   "today",
 ];

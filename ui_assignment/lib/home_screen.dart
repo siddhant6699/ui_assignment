@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ui_assignment/second_screen.dart';
 import 'package:ui_assignment/utils/konstant.dart';
 import 'package:ui_assignment/widgets/default_border_row.dart';
 import 'package:ui_assignment/widgets/default_button.dart';
@@ -225,7 +226,10 @@ class ProfileSection extends StatelessWidget {
                 ),
               ],
             ),
-            EditProfieButton(onPressed: () {})
+            EditProfieButton(onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SecondScreen()));
+            })
           ],
         ),
         Padding(
